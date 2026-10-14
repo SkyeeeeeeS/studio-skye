@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Studio Skye</title>
+  <meta name="description" content="Studio Skye. Sweet moments, last forever.">
+  <meta name="theme-color" content="#0c0c0c">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400&display=swap">
+  <link rel="stylesheet" href="styles.css?v=21">
+</head>
+<body>
+  <a class="skip" href="#views">Skip to content</a>
+
+  <header class="bar">
+    <a class="brand" href="#home" data-go="home">
+      <img src="media/mark-white.png" alt="" width="42" height="36">
+      <span class="brand-type">
+        <strong>Studio Skye</strong>
+        <small><i></i>Cake Studio<i></i></small>
+      </span>
+    </a>
+    <nav aria-label="Pages">
+      <a href="#home" data-go="home">Home</a>
+      <a href="#about" data-go="about">About</a>
+      <a href="#website" data-go="website">Website</a>
+      <a href="#design" data-go="design">Design</a>
+      <a href="#contact" data-go="contact">Contact</a>
+    </nav>
+  </header>
+
+  <div id="views">
+    <section class="view is-on home-view" id="view-home" data-view="home">
+      <div class="home-stage">
+        <div class="home-film">
+          <video src="media/home/level.mp4" muted loop playsinline autoplay aria-label="Studio Skye film"></video>
+          <div class="home-shade" aria-hidden="true"></div>
+        </div>
+        <img class="home-logo" src="media/logo-dark.png" alt="Studio Skye Cake Studio">
+        <div class="home-veil"></div>
+      </div>
+    </section>
+
+    <section class="view" id="view-about" data-view="about" hidden>
+      <div class="about pane">
+        <img class="about-mark" src="media/mark-white.png" alt="">
+        <p class="brand-lock">Studio Skye <span>Cake Studio</span></p>
+        <h2>More Than<br>Just Dessert</h2>
+        <p class="quiet">It's a moment of happiness.</p>
+      </div>
+    </section>
+
+    <section class="view" id="view-website" data-view="website" hidden>
+      <div class="menu-scene">
+        <div class="menu-board">
+          <header class="menu-head">
+            <img src="media/mark-dark.png" alt="">
+            <strong>Studio Skye</strong>
+            <em>Dessert Menu</em>
+          </header>
+          <div class="sites">
+            <a class="site-card" href="https://forgoodesign.pages.dev/" target="_blank" rel="noopener noreferrer">
+              <span class="card-brand"><img src="media/mark-dark.png" alt=""><span>Studio Skye</span></span>
+              <strong>Official AI Accounts</strong>
+              <em>The real profiles, gathered in one place.</em>
+              <span class="card-go" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                  <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+            <a class="site-card" href="https://news-keywords.pages.dev/" target="_blank" rel="noopener noreferrer">
+              <span class="card-brand"><img src="media/mark-dark.png" alt=""><span>Studio Skye</span></span>
+              <strong>Latest News</strong>
+              <em>A quiet reading of today's stories.</em>
+              <span class="card-go" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                  <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="view-design" data-view="design" hidden>
+      <div class="menu-scene">
+        <div class="menu-board" id="design-board">
+          <header class="menu-head">
+            <img src="media/mark-dark.png" alt="">
+            <strong>Studio Skye</strong>
+            <em id="design-kicker">Design</em>
+          </header>
+          <div class="board-face" data-face="index">
+            <div class="design-picks">
+              <button type="button" class="pick-card" data-open="animation"><img src="media/reels/reel-01.jpg" alt=""><span>Animation</span></button>
+              <button type="button" class="pick-card" data-open="waffle"><img src="media/stills/waffle-cream.webp" alt=""><span>Waffle</span></button>
+              <button type="button" class="pick-card" data-open="cookie"><img src="media/stills/cookie-drizzle.webp" alt=""><span>Cookie</span></button>
+              <button type="button" class="pick-card" data-open="cake"><img src="media/stills/cake-stand.webp" alt=""><span>Cake</span></button>
+            </div>
+          </div>
+          <div class="board-face" data-face="detail" hidden>
+            <button type="button" class="back-menu" data-open="index">Back</button>
+            <div class="inner-sheet" id="design-sheet">
+              <div class="set" data-set="animation">
+                <figure class="tile"><video poster="media/reels/reel-01.jpg" muted loop playsinline preload="auto" aria-label="Stacked donuts"><source src="media/reels/reel-01.mp4" type="video/mp4"></video></figure>
+                <figure class="tile"><video poster="media/reels/reel-02.jpg" muted loop playsinline preload="auto" aria-label="Milk pouring over donuts"><source src="media/reels/reel-02.mp4" type="video/mp4"></video></figure>
+                <figure class="tile"><video poster="media/reels/reel-03.jpg" muted loop playsinline preload="auto" aria-label="Cherry dessert"><source src="media/reels/reel-03.mp4" type="video/mp4"></video></figure>
+              </div>
+              <div class="set" data-set="waffle" hidden>
+                <figure class="tile"><img src="media/stills/waffle-cream.webp" alt="Waffle with cream"></figure>
+                <figure class="tile"><img src="media/stills/waffle-pour.webp" alt="Syrup pouring over a waffle"></figure>
+              </div>
+              <div class="set" data-set="cookie" hidden>
+                <figure class="tile"><img src="media/stills/cookie-drizzle.webp" alt="Cookies with chocolate drizzle"></figure>
+                <figure class="tile"><img src="media/stills/cookie-sprinkle.webp" alt="Cookies with sprinkles"></figure>
+                <figure class="tile"><img src="media/stills/cookie-bite.webp" alt="A bitten cookie"></figure>
+                <figure class="tile"><img src="media/stills/cookie-layers.webp" alt="Layered cookies"></figure>
+                <figure class="tile"><img src="media/stills/cookie-cocoa.webp" alt="Cocoa cookies"></figure>
+                <figure class="tile"><img src="media/stills/cookie-pair.webp" alt="A pair of cream cookies"></figure>
+              </div>
+              <div class="set" data-set="cake" hidden>
+                <figure class="tile"><img src="media/stills/cake-stand.webp" alt="Cream cake on a stand"></figure>
+                <figure class="tile"><img src="media/stills/cake-slice.webp" alt="A slice of cream cake"></figure>
+                <figure class="tile"><img src="media/stills/cake-table.webp" alt="Cake on a dinner table"></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view contact-view" id="view-contact" data-view="contact" hidden>
+      <div class="contact-bg"></div>
+      <div class="contact-shade"></div>
+      <div class="contact-split pane">
+        <div class="contact-intro">
+          <h2>Contact</h2>
+          <p>Studio Skye<br>Cake Studio</p>
+        </div>
+        <form id="inquiry-form" novalidate>
+          <label>
+            <span>E-Mail or Your SNS to Answer</span>
+            <input name="contact" type="text" autocomplete="email" required>
+          </label>
+          <label>
+            <span>The design, website, or request you have in mind</span>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <p class="form-error" id="form-error" hidden></p>
+          <button class="send" type="submit">Send</button>
+          <p class="form-ready" id="form-ready" hidden>Ready. Send it from your mail window.</p>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <script src="site.js?v=20"></script>
+</body>
+</html>
