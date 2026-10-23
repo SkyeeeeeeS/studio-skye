@@ -11,8 +11,6 @@
 
 html, body { margin: 0; background: var(--bg); color: var(--ink); }
 
-html { min-width: 1280px; }
-
 body {
   min-height: 100vh;
   font-family: var(--sans);
@@ -577,15 +575,135 @@ input:focus, textarea:focus { outline: none; border-bottom-color: #fff; }
 
 .form-ready { margin: 0; color: var(--muted); }
 
-@media (max-aspect-ratio: 1/1) {
-  body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  #views {
-    flex: 0 0 auto;
-    height: 802px;
-  }
+html.is-preview {
+  background: #141414;
+}
+
+html.is-preview body {
+  width: 390px;
+  height: 844px;
+  min-height: 844px;
+  margin: 28px auto;
+  overflow: hidden;
+  box-shadow: 0 0 0 10px #2a2a2a, 0 28px 70px rgba(0, 0, 0, 0.45);
+}
+
+html.is-phone,
+html.is-phone body {
+  min-width: 0;
+}
+
+html.is-phone body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100dvh;
+  overflow: hidden;
+}
+
+html.is-phone .bar {
+  height: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: 12px;
+  padding: 14px 16px 12px;
+}
+
+html.is-phone nav {
+  flex: 1 1 100%;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+html.is-phone nav a {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+html.is-phone #views {
+  flex: 1 1 auto;
+  height: auto;
+  min-height: 0;
+}
+
+html.is-phone .home-film {
+  width: 100%;
+  height: auto;
+  max-width: none;
+  top: 50%;
+  right: 0;
+  bottom: auto;
+  transform: translateY(-50%);
+}
+
+html.is-phone .home-stage { container-type: size; }
+
+html.is-phone .home-logo {
+  left: 16px;
+  width: 108px;
+  top: calc(50cqh - 50cqw + 18px);
+  transform: none;
+}
+
+html.is-phone .about {
+  padding: 40px 24px;
+}
+
+html.is-phone .about h2 {
+  font-size: 52px;
+}
+
+html.is-phone .menu-scene {
+  align-items: flex-start;
+  padding: 18px 12px 28px;
+}
+
+html.is-phone .menu-board {
+  width: 100%;
+  padding: 22px 14px 24px;
+}
+
+html.is-phone .sites {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+html.is-phone .site-card {
+  width: 100%;
+  min-height: 0;
+}
+
+html.is-phone .site-card strong {
+  font-size: 32px;
+}
+
+html.is-phone .design-picks {
+  width: 100%;
+  gap: 22px 16px;
+}
+
+html.is-phone .pick-card img {
+  width: 100%;
+}
+
+html.is-phone .contact-split {
+  grid-template-columns: 1fr;
+  gap: 22px;
+  padding: 32px 20px 40px;
+}
+
+html.is-phone .contact-intro h2 {
+  font-size: 52px;
+}
+
+html.is-phone .tile {
+  width: min(280px, 100%);
+  flex-basis: min(280px, 100%);
+}
+
+html.is-preview body {
+  width: 390px;
+  height: 844px;
+  min-height: 844px;
+  margin: 28px auto;
 }

@@ -18,7 +18,15 @@
     })(window, document, "clarity", "script", "z1nscm3mk0");
   </script>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=1280">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      var phone = new URLSearchParams(location.search).has("phone");
+      var narrow = window.matchMedia("(max-width: 820px)").matches;
+      if (phone || narrow) document.documentElement.classList.add("is-phone");
+      if (phone && !narrow) document.documentElement.classList.add("is-preview");
+    })();
+  </script>
   <title>Studio Skye</title>
   <meta name="description" content="Studio Skye. Sweet moments, last forever.">
   <meta name="theme-color" content="#0c0c0c">
@@ -26,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400&display=swap">
-  <link rel="stylesheet" href="styles.css?v=28">
+  <link rel="stylesheet" href="styles.css?v=30">
 </head>
 <body>
   <a class="skip" href="#views">Skip to content</a>
