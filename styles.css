@@ -18,7 +18,12 @@ body {
   user-select: none;
 }
 
-img, video { display: block; max-width: 100%; }
+img, video {
+  display: block;
+  max-width: 100%;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
 
 button, a { font: inherit; color: inherit; }
 
@@ -571,11 +576,45 @@ input:focus, textarea:focus { outline: none; border-bottom-color: #fff; }
 .form-ready { margin: 0; color: var(--muted); }
 
 @media (max-width: 860px) {
-  .bar { height: auto; min-height: 72px; padding: 14px 16px; align-items: flex-start; }
-  nav { gap: 10px 12px; flex-wrap: wrap; justify-content: flex-end; }
-  nav a { font-size: 11px; letter-spacing: 0.08em; }
-  .home-film { height: auto; width: 100%; top: auto; bottom: 0; }
-  .home-logo { left: 7%; width: min(180px, 46%); top: 22%; transform: none; }
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .bar {
+    height: auto;
+    min-height: 0;
+    padding: 12px 16px 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+  nav {
+    flex: 1 1 100%;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  nav a { font-size: 11px; letter-spacing: 0.06em; }
+  #views {
+    flex: 1 1 auto;
+    height: auto;
+    min-height: 0;
+  }
+  .home-film {
+    width: 100%;
+    height: auto;
+    top: 50%;
+    right: 0;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+  .home-logo {
+    left: 6%;
+    width: min(168px, 44vw);
+    top: 50%;
+    transform: translateY(-50%);
+  }
   .menu-board { padding: 28px 18px 32px; }
   .sites { flex-direction: column; align-items: center; }
   .contact-split { grid-template-columns: 1fr; padding: 36px 20px 48px; }

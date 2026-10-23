@@ -26,7 +26,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400&display=swap">
-  <link rel="stylesheet" href="styles.css?v=24">
+  <link rel="stylesheet" href="styles.css?v=26">
 </head>
 <body>
   <a class="skip" href="#views">Skip to content</a>
@@ -52,7 +52,7 @@
     <section class="view is-on home-view" id="view-home" data-view="home">
       <div class="home-stage">
         <div class="home-film">
-          <video src="media/home/level.mp4" muted loop playsinline autoplay aria-label="Studio Skye film"></video>
+          <video src="media/home/level.mp4" muted loop playsinline autoplay disablepictureinpicture aria-label="Studio Skye film"></video>
           <div class="home-shade" aria-hidden="true"></div>
         </div>
         <img class="home-logo" src="media/logo-dark.png" alt="Studio Skye Cake Studio">
@@ -123,9 +123,9 @@
             <button type="button" class="back-menu" data-open="index">Back</button>
             <div class="inner-sheet" id="design-sheet">
               <div class="set" data-set="animation">
-                <figure class="tile"><video poster="media/reels/reel-01.jpg" muted loop playsinline preload="auto" aria-label="Stacked donuts"><source src="media/reels/reel-01.mp4" type="video/mp4"></video></figure>
-                <figure class="tile"><video poster="media/reels/reel-02.jpg" muted loop playsinline preload="auto" aria-label="Milk pouring over donuts"><source src="media/reels/reel-02.mp4" type="video/mp4"></video></figure>
-                <figure class="tile"><video poster="media/reels/reel-03.jpg" muted loop playsinline preload="auto" aria-label="Cherry dessert"><source src="media/reels/reel-03.mp4" type="video/mp4"></video></figure>
+                <figure class="tile"><video poster="media/reels/reel-01.jpg" muted loop playsinline preload="auto" disablepictureinpicture aria-label="Stacked donuts"><source src="media/reels/reel-01.mp4" type="video/mp4"></video></figure>
+                <figure class="tile"><video poster="media/reels/reel-02.jpg" muted loop playsinline preload="auto" disablepictureinpicture aria-label="Milk pouring over donuts"><source src="media/reels/reel-02.mp4" type="video/mp4"></video></figure>
+                <figure class="tile"><video poster="media/reels/reel-03.jpg" muted loop playsinline preload="auto" disablepictureinpicture aria-label="Cherry dessert"><source src="media/reels/reel-03.mp4" type="video/mp4"></video></figure>
               </div>
               <div class="set" data-set="waffle" hidden>
                 <figure class="tile"><img src="media/stills/waffle-cream.webp" alt="Waffle with cream"></figure>
@@ -175,6 +175,6 @@
     </section>
   </div>
 
-  <script src="site.js?v=20"></script>
+  <script src="site.js?v=21"></script>
 </body>
 </html>

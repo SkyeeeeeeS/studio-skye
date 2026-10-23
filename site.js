@@ -289,6 +289,26 @@ if (start !== "home" && document.querySelector(`[data-view="${start}"]`)) {
 markNav(current);
 syncHome();
 
+document.addEventListener("contextmenu", (event) => {
+  if (event.target.closest("input, textarea")) return;
+  event.preventDefault();
+});
+
+document.addEventListener("dragstart", (event) => {
+  event.preventDefault();
+});
+
+document.querySelectorAll("video").forEach((video) => {
+  video.loop = true;
+  video.disablePictureInPicture = true;
+  video.addEventListener("pause", () => {
+    const onHome = video.closest(".home-film") && current === "home";
+    const set = video.closest(".set");
+    const onReel = set && current === "design" && set.classList.contains("is-shown") && !set.hidden;
+    if (onHome || onReel) video.play().catch(() => {});
+  });
+});
+
 const form = document.querySelector("#inquiry-form");
 const formError = document.querySelector("#form-error");
 const formReady = document.querySelector("#form-ready");
